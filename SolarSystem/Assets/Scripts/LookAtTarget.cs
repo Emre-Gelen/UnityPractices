@@ -59,7 +59,7 @@ public class LookAtTarget : MonoBehaviour {
             // transform here refers to the attached gameobject this script is on.
             // the LookAt function makes a transform point it's Z axis towards another point in space
             // In this case it is pointing towards the target.transform
-            transform.LookAt(currentTarget.transform);
+            this.transform.LookAt(currentTarget.transform);
         } else // reset the look at back to the default
         {
             currentTarget = defaultTarget;
