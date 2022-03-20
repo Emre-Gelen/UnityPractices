@@ -113,7 +113,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectileSpeed: 6
-  destroyDistance: 20
+  destroyDistance: 60
 --- !u!96 &6206018477942520913
 TrailRenderer:
   serializedVersion: 2
