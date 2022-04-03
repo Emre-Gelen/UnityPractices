@@ -123,7 +123,7 @@ public class ShootingController : MonoBehaviour
 
             if (fireEffect != null)
             {
-                Instantiate(fireEffect, transform.position, transform.rotation, null);
+                Instantiate(fireEffect, transform.position, transform.rotation, projectileHolder);
             }
 
             // Restart the cooldown

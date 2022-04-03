@@ -12,6 +12,8 @@ public class EnemySpawner : MonoBehaviour
     public GameObject enemyPrefab = null;
     [Tooltip("The target of the spwaned enemies")]
     public Transform target = null;
+    [Tooltip("The transform in the heirarchy which holds enemies if any")]
+    public Transform enemyHolder = null;
 
     [Header("Spawn Position")]
     [Tooltip("The distance within which enemies can spawn in the X direction")]
@@ -101,6 +103,11 @@ public class EnemySpawner : MonoBehaviour
             foreach (ShootingController gun in shootingControllers)
             {
                 gun.projectileHolder = projectileHolder;
+            }
+
+            if (enemyHolder != null)
+            {
+                enemyGameObject.transform.SetParent(enemyHolder);
             }
 
             // Incremment the spawn count

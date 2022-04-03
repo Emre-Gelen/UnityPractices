@@ -17,7 +17,7 @@ public class Enemy : MonoBehaviour
     [Tooltip("The transform of the object that this enemy should follow.")]
     public Transform followTarget = null;
     [Tooltip("The distance at which the enemy begins following the follow target.")]
-    public float followRange = 10.0f;
+    public float followRange = 5000.0f;
 
     [Header("Shooting")]
     [Tooltip("The enemy's gun components")]
@@ -236,10 +236,13 @@ public class Enemy : MonoBehaviour
             case ShootMode.None:
                 break;
             case ShootMode.ShootAll:
-                foreach (ShootingController gun in guns)
-                {
-                    gun.Fire();
-                }
+                //Calculate distance between enemy and player.
+                double distance = Vector2.Distance(transform.position, followTarget.transform.position);
+                if (distance < 50)
+                    foreach (ShootingController gun in guns)
+                    {
+                        gun.Fire();
+                    }
                 break;
         }
     }
