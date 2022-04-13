@@ -213,7 +213,7 @@ MonoBehaviour:
   jumpPower: 25
   allowedJumps: 2
   jumpDuration: 0.2
-  jumpEffect: {fileID: 8575377121547827367, guid: 8fdea087819dadf4cb9c75a92cb4227e, type: 3}
+  jumpEffect: {fileID: 5968949161550206435, guid: 6c67c93cef4438449b3614f7fc9d7ea4, type: 3}
   passThroughLayers: []
   state: 0
 --- !u!114 &8128307141711142836
@@ -253,7 +253,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerController: {fileID: 8128307141711142835}
-  animator: {fileID: 0}
+  animator: {fileID: 8782199501710869664}
 --- !u!1 &8128307142647824882
 GameObject:
   m_ObjectHideFlags: 0
